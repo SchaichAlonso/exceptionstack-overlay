@@ -1,0 +1,19 @@
+{
+    "name": "exceptionstack",
+    "version": "0.0.1",
+    "description": "exception handling library",
+    "homepage": "https://github.com/SchaichAlonso/ExceptionStack",
+    "license": "BSD-2-Clause",
+    "dependencies": [
+      {
+        "name": "vcpkg-cmake",
+        "host": true
+      },
+      {
+        "name": "qtbase",
+        "default-features": false,
+        "features": ["concurrent", "testlib"]
+      }
+    ]
+  }
+  
