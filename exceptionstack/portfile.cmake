@@ -2,8 +2,8 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO SchaichAlonso/ExceptionStack
     REF "${VERSION}"
-    SHA512 82bbcf805862b10a4ea627467f3f8b8084e5200855e0289f67a0ad5c92e5bb272af89273dcf9f3fcae1b810151442db38408bcbaf804b6f51ea529ec80feb2af
-    REF d5cd82a72eb2931d01d1afe207b29d25195b77c6
+    SHA512 7515c16ace109f3e6bea31dbe04d01c218e2f765f768d54a7208841a085276f395403402827d16d6d068a954b613bdbd0439685fc89706f0181c7fadf30441d9
+    REF a055c1b65c55a653bf877704312052754bbde124
 )
 
 vcpkg_cmake_configure(
@@ -12,7 +12,7 @@ vcpkg_cmake_configure(
 vcpkg_cmake_install()
 vcpkg_copy_pdbs()
 vcpkg_fixup_pkgconfig()
-
+vcpkg_cmake_config_fixup(CONFIG_PATH "share/cmake/Exceptions")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share"
                     "${CURRENT_PACKAGES_DIR}/debug/include"
 )
